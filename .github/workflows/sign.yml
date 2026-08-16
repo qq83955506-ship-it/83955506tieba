@@ -1,0 +1,27 @@
+name: tieba-sign
+
+on:
+  schedule:
+    # 每天 00:30 (UTC+8 北京时间) = 16:30 UTC
+    # GitHub 的 cron 基于 UTC；签到是每天 0 点刷新，稍晚一点更稳
+    - cron: "30 16 * * *"
+  workflow_dispatch: {}   # 允许手动点一下运行
+
+jobs:
+  sign:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependency
+        run: pip install -r requirements.txt
+
+      - name: Run sign-in
+        env:
+          TIEBA_BDUSS: ${{ secrets.TIEBA_BDUSS }}
+        run: python sign.py
