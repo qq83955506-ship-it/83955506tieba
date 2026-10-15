@@ -63,7 +63,7 @@ async def sign_all(client: tb.Client, interval: float) -> dict[str, int]:
     stats = {"total": 0, "ok": 0, "already": 0, "fail": 0}
     pn = 1
     while True:
-        forums = await client.get_self_follow_forums(pn, rn=200)
+        forums = await client.get_self_follow_forums()
         if forums.err is not None:
             raise forums.err
 
