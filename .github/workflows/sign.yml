@@ -2,10 +2,12 @@ name: tieba-sign
 
 on:
   schedule:
-    # 每天 00:30 (UTC+8 北京时间) = 16:30 UTC
-    # GitHub 的 cron 基于 UTC；签到是每天 0 点刷新，稍晚一点更稳
+    # 每天 00:30（北京时间）= 16:30 UTC
     - cron: "30 16 * * *"
-  workflow_dispatch: {}   # 允许手动点一下运行
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
 
 jobs:
   sign:
@@ -25,3 +27,15 @@ jobs:
         env:
           TIEBA_BDUSS: ${{ secrets.TIEBA_BDUSS }}
         run: python sign.py
+
+      - name: Publish dashboard status
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/status.json
+          if git diff --cached --quiet; then
+            echo "Dashboard status unchanged."
+          else
+            git commit -m "Update sign-in dashboard status"
+            git push
+          fi
