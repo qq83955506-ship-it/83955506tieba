@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>贴吧自动签到面板</title>
+<style>
+:root{color-scheme:light;--bg:#f4f6fa;--card:#fff;--text:#172033;--muted:#6b7280;--line:#e5e7eb;--green:#15803d;--red:#b91c1c;--blue:#2563eb}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1000px;margin:0 auto;padding:32px 18px 56px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:22px}h1{font-size:26px;margin:0}p{margin:4px 0;color:var(--muted)}button{border:0;border-radius:10px;padding:10px 15px;background:var(--blue);color:white;font-weight:600;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 2px 8px #10182808}.label{font-size:13px;color:var(--muted)}.num{font-size:30px;font-weight:750;line-height:1.4;margin-top:6px}.ok{color:var(--green)}.bad{color:var(--red)}.section{margin-top:22px}.section h2{font-size:18px;margin:0 0 12px}.statusline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin-top:18px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}.toolbar input,.toolbar select{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:white;color:var(--text)}
+table{width:100%;border-collapse:collapse;background:white}th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line)}th{font-size:13px;color:var(--muted);font-weight:600;background:#fafafa}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:14px}.pill{display:inline-block;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:650;background:#f3f4f6}.pill.success{background:#dcfce7;color:#166534}.pill.already{background:#dbeafe;color:#1d4ed8}.pill.failed{background:#fee2e2;color:#991b1b}.empty{padding:24px;text-align:center;color:var(--muted)}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}main{padding:22px 12px}h1{font-size:22px}.num{font-size:26px}}
+</style>
+</head>
+<body><main>
+<div class="top"><div><h1>贴吧自动签到面板</h1><p>自动读取关注贴吧 · 每天定时运行</p></div><button id="refresh">刷新数据</button></div>
+<div class="grid">
+<div class="card"><div class="label">关注贴吧总数</div><div class="num" id="total">—</div></div>
+<div class="card"><div class="label">本次新签到成功</div><div class="num ok" id="success">—</div></div>
+<div class="card"><div class="label">今日已签到</div><div class="num" id="already">—</div></div>
+<div class="card"><div class="label">签到失败</div><div class="num bad" id="failed">—</div></div>
+</div>
+<div class="statusline"><span id="updated">正在读取最近一次签到结果…</span><span id="growth"></span></div>
+<section class="section card"><h2>关注贴吧明细</h2><div class="toolbar"><input id="search" placeholder="搜索贴吧名称…" aria-label="搜索贴吧名称"><select id="filter" aria-label="筛选状态"><option value="all">全部状态</option><option value="success">新签到成功</option><option value="already">今日已签到</option><option value="failed">签到失败</option></select></div>
+<div class="tablewrap"><table><thead><tr><th>贴吧</th><th>等级</th><th>状态</th><th>说明</th></tr></thead><tbody id="rows"><tr><td colspan="4" class="empty">正在加载…</td></tr></tbody></table></div></section>
+<p style="font-size:12px;margin-top:16px">本页面只展示签到统计，不会显示或保存百度登录凭证。签到数据由 GitHub Actions 更新。</p>
+</main>
+<script>
+let report={forums:[]};
+const labels={success:"新签到成功",already:"今日已签到",failed:"签到失败"};
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function render(){const q=document.querySelector("#search").value.trim().toLowerCase(),f=document.querySelector("#filter").value;const list=(report.forums||[]).filter(x=>(!q||String(x.forum||"").toLowerCase().includes(q))&&(f==="all"||x.status===f));const rows=document.querySelector("#rows");if(!list.length){rows.innerHTML='<tr><td colspan="4" class="empty">没有匹配的贴吧记录</td></tr>';return}rows.innerHTML=list.map(x=>'<tr><td>'+esc(x.forum)+'</td><td>'+(x.level==null?"—":esc(x.level))+'</td><td><span class="pill '+esc(x.status)+'">'+esc(labels[x.status]||x.status||"未知")+'</span></td><td>'+esc(x.message||"—")+'</td></tr>').join("")}
+async function load(){document.querySelector("#refresh").disabled=true;try{const r=await fetch("./status.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("还没有签到数据（HTTP "+r.status+"）");report=await r.json();for(const k of ["total","success","already","failed"])document.querySelector("#"+k).textContent=report[k]??0;const d=report.generated_at?new Date(report.generated_at):null;document.querySelector("#updated").textContent="最近更新："+(d&&!isNaN(d)?d.toLocaleString("zh-CN",{hour12:false}):"未知");document.querySelector("#growth").textContent="成长值签到："+({success:"成功",failed:"失败"}[report.growth_status]||"未知");render()}catch(e){document.querySelector("#updated").textContent=e.message;document.querySelector("#rows").innerHTML='<tr><td colspan="4" class="empty">暂时没有可展示的数据。请先运行一次 GitHub Actions。</td></tr>'}finally{document.querySelector("#refresh").disabled=false}}
+document.querySelector("#refresh").addEventListener("click",load);document.querySelector("#search").addEventListener("input",render);document.querySelector("#filter").addEventListener("change",render);load();
+</script></body></html>
