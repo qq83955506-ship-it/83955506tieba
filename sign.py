@@ -61,7 +61,7 @@ def load_bduss() -> str:
 
 async def sign_all(client: tb.Client, interval: float) -> dict[str, int]:
     stats = {"total": 0, "ok": 0, "already": 0, "fail": 0}
-    pn = 1
+
     while True:
         forums = await client.get_self_follow_forums()
         if forums.err is not None:
@@ -84,9 +84,7 @@ async def sign_all(client: tb.Client, interval: float) -> dict[str, int]:
             if interval > 0:
                 await asyncio.sleep(interval)
 
-        if not forums.has_more:
-            break
-        pn += 1
+     
 
     return stats
 
