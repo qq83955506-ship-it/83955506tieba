@@ -59,7 +59,7 @@ def load_bduss() -> str:
     )
 
 
-```python
+
 async def sign_all(client: tb.Client, interval: float) -> dict[str, int]:
     stats = {"total": 0, "ok": 0, "already": 0, "fail": 0}
 
@@ -90,7 +90,6 @@ async def sign_all(client: tb.Client, interval: float) -> dict[str, int]:
             await asyncio.sleep(interval)
 
     return stats
-```
 
 
 async def main() -> None:
