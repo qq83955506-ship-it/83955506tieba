@@ -59,34 +59,38 @@ def load_bduss() -> str:
     )
 
 
+```python
 async def sign_all(client: tb.Client, interval: float) -> dict[str, int]:
     stats = {"total": 0, "ok": 0, "already": 0, "fail": 0}
 
-    while True:
-        forums = await client.get_self_follow_forums()
-        if forums.err is not None:
-            raise forums.err
+    forums = await client.get_self_follow_forums()
+    if forums.err is not None:
+        raise forums.err
 
-        for f in forums:
-            stats["total"] += 1
-            if f.is_signed:
-                stats["already"] += 1
-                continue
+    for f in forums:
+        stats["total"] += 1
 
+        if f.is_signed:
+            stats["already"] += 1
+            continue
+
+        try:
             resp = await client.sign_forum(f.fname)
-            if resp:  # BoolResponse 为真 => err 为 None => 签到成功
+            if resp:
                 stats["ok"] += 1
-                print(f"  [OK]   {f.fname}  (Lv.{f.level})")
+                print(f"  [OK]   {f.fname} (Lv.{f.level})")
             else:
                 stats["fail"] += 1
                 print(f"  [FAIL] {f.fname} : {resp.err}")
+        except Exception as e:
+            stats["fail"] += 1
+            print(f"  [FAIL] {f.fname} : {e}")
 
-            if interval > 0:
-                await asyncio.sleep(interval)
-
-     
+        if interval > 0:
+            await asyncio.sleep(interval)
 
     return stats
+```
 
 
 async def main() -> None:
