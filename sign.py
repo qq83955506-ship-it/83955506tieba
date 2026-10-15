@@ -20,8 +20,10 @@ BDUSS 读取优先级（任一即可）:
 from __future__ import annotations
 
 import asyncio
+import json
 import os
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 import aiotieba as tb
@@ -61,7 +63,7 @@ def load_bduss() -> str:
 
 
 async def sign_all(client: tb.Client, interval: float) -> dict[str, int]:
-    stats = {"total": 0, "ok": 0, "already": 0, "fail": 0}
+    stats = {"total": 0, "ok": 0, "already": 0, "fail": 0, "details": []}
 
     forums = await client.get_self_follow_forums()
     if forums.err is not None:
@@ -72,6 +74,7 @@ async def sign_all(client: tb.Client, interval: float) -> dict[str, int]:
 
         if f.is_signed:
             stats["already"] += 1
+            stats["details"].append({"forum": f.fname, "level": getattr(f, "level", None), "status": "already"})
             continue
 
         try:
@@ -79,12 +82,15 @@ async def sign_all(client: tb.Client, interval: float) -> dict[str, int]:
             if resp:
                 stats["ok"] += 1
                 print(f"  [OK]   {f.fname} (Lv.{f.level})")
+                stats["details"].append({"forum": f.fname, "level": getattr(f, "level", None), "status": "success"})
             else:
                 stats["fail"] += 1
                 print(f"  [FAIL] {f.fname} : {resp.err}")
+                stats["details"].append({"forum": f.fname, "level": getattr(f, "level", None), "status": "failed", "message": str(resp.err)})
         except Exception as e:
             stats["fail"] += 1
             print(f"  [FAIL] {f.fname} : {e}")
+            stats["details"].append({"forum": f.fname, "level": getattr(f, "level", None), "status": "failed", "message": str(e)})
 
         if interval > 0:
             await asyncio.sleep(interval)
@@ -99,15 +105,34 @@ async def main() -> None:
     timeout = tb.TimeoutConfig(http_connect=15.0, http_read=30.0, http_acquire_conn=10.0)
 
     print("正在登录并拉取关注贴吧列表……")
+    growth_status = "unknown"
     async with tb.Client(bduss, timeout=timeout) as client:
         stats = await sign_all(client, interval)
 
         # 成长值签到（可选，失败不影响主流程）
         try:
             g = await client.sign_growth()
+            growth_status = "success" if g else "failed"
             print(f"成长值签到: {'成功' if g else '失败 ' + str(g.err)}")
         except Exception as e:  # noqa: BLE001
+            growth_status = "failed"
             print(f"成长值签到跳过: {e}")
+
+    # 生成静态网页读取的公开统计文件；不写入任何登录凭证。
+    report_dir = Path(__file__).with_name("web")
+    report_dir.mkdir(exist_ok=True)
+    report = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "total": stats["total"],
+        "success": stats["ok"],
+        "already": stats["already"],
+        "failed": stats["fail"],
+        "growth_status": growth_status,
+        "forums": stats["details"],
+    }
+    (report_dir / "status.json").write_text(
+        json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
     print("-" * 48)
     print(
