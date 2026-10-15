@@ -1,9 +1,200 @@
 {
-  "generated_at": null,
-  "total": 0,
+  "generated_at": "2026-10-15T05:40:26.199393+00:00",
+  "total": 38,
   "success": 0,
-  "already": 0,
+  "already": 38,
   "failed": 0,
-  "growth_status": "unknown",
-  "forums": []
+  "growth_status": "success",
+  "forums": [
+    {
+      "forum": "上海城建职业学院",
+      "level": 14,
+      "status": "already"
+    },
+    {
+      "forum": "空间留言",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "空间访客",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "留言",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "大同",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "猫",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "k说说",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "炫舞三生三世",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "新浪围脖",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "王者荣耀",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "男生头像",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "小说",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "yy",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "情侣头像",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "快手",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "灵异",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "爱你纵使繁华一场",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "picsart",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "葫芦侠三楼",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "情侣",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "上海工会管理职业学院",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "discuz",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "江疏影",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "新媒体运营",
+      "level": 13,
+      "status": "already"
+    },
+    {
+      "forum": "天籁",
+      "level": 12,
+      "status": "already"
+    },
+    {
+      "forum": "义乌快递",
+      "level": 12,
+      "status": "already"
+    },
+    {
+      "forum": "腾讯qq号",
+      "level": 12,
+      "status": "already"
+    },
+    {
+      "forum": "图",
+      "level": 12,
+      "status": "already"
+    },
+    {
+      "forum": "养鱼",
+      "level": 12,
+      "status": "already"
+    },
+    {
+      "forum": "淘宝网",
+      "level": 12,
+      "status": "already"
+    },
+    {
+      "forum": "憨批",
+      "level": 12,
+      "status": "already"
+    },
+    {
+      "forum": "孙笑川",
+      "level": 12,
+      "status": "already"
+    },
+    {
+      "forum": "相亲",
+      "level": 12,
+      "status": "already"
+    },
+    {
+      "forum": "新孙笑川",
+      "level": 12,
+      "status": "already"
+    },
+    {
+      "forum": "溪流缸",
+      "level": 12,
+      "status": "already"
+    },
+    {
+      "forum": "吴兴",
+      "level": 12,
+      "status": "already"
+    },
+    {
+      "forum": "湖州",
+      "level": 12,
+      "status": "already"
+    },
+    {
+      "forum": "周也",
+      "level": 12,
+      "status": "already"
+    }
+  ]
 }
