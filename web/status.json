@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T16:58:40.693790+00:00",
+  "generated_at": "2026-10-17T16:51:57.731202+00:00",
   "total": 38,
   "success": 36,
   "already": 2,
@@ -19,7 +19,7 @@
     {
       "forum": "空间访客",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "留言",
@@ -49,12 +49,12 @@
     {
       "forum": "新浪围脖",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "王者荣耀",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "男生头像",
@@ -109,7 +109,7 @@
     {
       "forum": "上海工会管理职业学院",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "discuz",
