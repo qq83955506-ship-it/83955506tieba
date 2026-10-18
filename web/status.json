@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-17T16:51:57.731202+00:00",
+  "generated_at": "2026-10-18T16:53:05.012992+00:00",
   "total": 38,
-  "success": 36,
-  "already": 2,
+  "success": 34,
+  "already": 4,
   "failed": 0,
   "growth_status": "success",
   "forums": [
@@ -17,12 +17,12 @@
       "status": "success"
     },
     {
-      "forum": "空间访客",
+      "forum": "留言",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
-      "forum": "留言",
+      "forum": "空间访客",
       "level": 13,
       "status": "success"
     },
@@ -34,7 +34,7 @@
     {
       "forum": "猫",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "k说说",
@@ -54,7 +54,7 @@
     {
       "forum": "王者荣耀",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "男生头像",
@@ -109,7 +109,7 @@
     {
       "forum": "上海工会管理职业学院",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "discuz",
@@ -119,7 +119,7 @@
     {
       "forum": "江疏影",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "新媒体运营",
@@ -164,7 +164,7 @@
     {
       "forum": "孙笑川",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "相亲",
