@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T16:53:05.012992+00:00",
+  "generated_at": "2026-10-19T17:01:07.158262+00:00",
   "total": 38,
   "success": 34,
   "already": 4,
@@ -17,12 +17,12 @@
       "status": "success"
     },
     {
-      "forum": "留言",
+      "forum": "空间访客",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
-      "forum": "空间访客",
+      "forum": "留言",
       "level": 13,
       "status": "success"
     },
@@ -34,7 +34,7 @@
     {
       "forum": "猫",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "k说说",
@@ -77,12 +77,12 @@
       "status": "success"
     },
     {
-      "forum": "快手",
+      "forum": "灵异",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
-      "forum": "灵异",
+      "forum": "快手",
       "level": 13,
       "status": "success"
     },
@@ -119,7 +119,7 @@
     {
       "forum": "江疏影",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "新媒体运营",
@@ -154,7 +154,7 @@
     {
       "forum": "淘宝网",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "憨批",
@@ -189,7 +189,7 @@
     {
       "forum": "湖州",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "周也",
