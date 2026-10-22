@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-21T17:00:17.798648+00:00",
+  "generated_at": "2026-10-22T17:00:33.310780+00:00",
   "total": 38,
-  "success": 37,
-  "already": 1,
+  "success": 38,
+  "already": 0,
   "failed": 0,
   "growth_status": "success",
   "forums": [
@@ -82,12 +82,12 @@
       "status": "success"
     },
     {
-      "forum": "爱你纵使繁华一场",
+      "forum": "灵异",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
-      "forum": "灵异",
+      "forum": "爱你纵使繁华一场",
       "level": 13,
       "status": "success"
     },
