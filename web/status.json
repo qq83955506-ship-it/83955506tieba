@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-23T17:00:29.628956+00:00",
+  "generated_at": "2026-10-24T16:55:12.545037+00:00",
   "total": 38,
-  "success": 35,
-  "already": 3,
+  "success": 37,
+  "already": 1,
   "failed": 0,
   "growth_status": "success",
   "forums": [
@@ -49,7 +49,7 @@
     {
       "forum": "新浪围脖",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "王者荣耀",
@@ -94,7 +94,7 @@
     {
       "forum": "picsart",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "葫芦侠三楼",
@@ -114,7 +114,7 @@
     {
       "forum": "discuz",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "江疏影",
@@ -179,7 +179,7 @@
     {
       "forum": "溪流缸",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "吴兴",
