@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-10-24T16:55:12.545037+00:00",
+  "generated_at": "2026-10-25T19:09:50.692612+00:00",
   "total": 38,
-  "success": 37,
-  "already": 1,
+  "success": 29,
+  "already": 9,
   "failed": 0,
   "growth_status": "success",
   "forums": [
     {
       "forum": "上海城建职业学院",
       "level": 14,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "空间留言",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "空间访客",
@@ -39,7 +39,7 @@
     {
       "forum": "k说说",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "炫舞三生三世",
@@ -57,17 +57,17 @@
       "status": "success"
     },
     {
+      "forum": "yy",
+      "level": 13,
+      "status": "already"
+    },
+    {
       "forum": "男生头像",
       "level": 13,
       "status": "success"
     },
     {
       "forum": "小说",
-      "level": 13,
-      "status": "success"
-    },
-    {
-      "forum": "yy",
       "level": 13,
       "status": "success"
     },
@@ -82,12 +82,12 @@
       "status": "success"
     },
     {
-      "forum": "灵异",
+      "forum": "爱你纵使繁华一场",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
-      "forum": "爱你纵使繁华一场",
+      "forum": "灵异",
       "level": 13,
       "status": "success"
     },
@@ -114,7 +114,7 @@
     {
       "forum": "discuz",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "江疏影",
@@ -139,7 +139,7 @@
     {
       "forum": "腾讯qq号",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "图",
@@ -174,17 +174,17 @@
     {
       "forum": "新孙笑川",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "溪流缸",
       "level": 12,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "吴兴",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "湖州",
