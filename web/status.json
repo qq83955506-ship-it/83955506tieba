@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-04T22:01:02.200385+00:00",
+  "generated_at": "2026-11-05T22:09:50.489543+00:00",
   "total": 38,
-  "success": 16,
-  "already": 22,
+  "success": 15,
+  "already": 23,
   "failed": 0,
   "growth_status": "success",
   "forums": [
@@ -19,7 +19,7 @@
     {
       "forum": "空间访客",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "留言",
@@ -29,7 +29,7 @@
     {
       "forum": "大同",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "猫",
@@ -44,7 +44,7 @@
     {
       "forum": "炫舞三生三世",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "新浪围脖",
@@ -54,7 +54,12 @@
     {
       "forum": "王者荣耀",
       "level": 13,
-      "status": "success"
+      "status": "already"
+    },
+    {
+      "forum": "男生头像",
+      "level": 13,
+      "status": "already"
     },
     {
       "forum": "小说",
@@ -72,22 +77,22 @@
       "status": "already"
     },
     {
-      "forum": "男生头像",
+      "forum": "快手",
       "level": 13,
       "status": "success"
     },
     {
-      "forum": "快手",
-      "level": 13,
-      "status": "already"
-    },
-    {
       "forum": "灵异",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "爱你纵使繁华一场",
+      "level": 13,
+      "status": "success"
+    },
+    {
+      "forum": "picsart",
       "level": 13,
       "status": "already"
     },
@@ -102,19 +107,14 @@
       "status": "already"
     },
     {
-      "forum": "picsart",
-      "level": 13,
-      "status": "success"
-    },
-    {
       "forum": "上海工会管理职业学院",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "discuz",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "江疏影",
@@ -124,7 +124,7 @@
     {
       "forum": "新媒体运营",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "天籁",
@@ -137,12 +137,12 @@
       "status": "already"
     },
     {
-      "forum": "图",
+      "forum": "腾讯qq号",
       "level": 12,
-      "status": "already"
+      "status": "success"
     },
     {
-      "forum": "腾讯qq号",
+      "forum": "图",
       "level": 12,
       "status": "success"
     },
@@ -184,7 +184,7 @@
     {
       "forum": "吴兴",
       "level": 12,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "湖州",
@@ -194,7 +194,7 @@
     {
       "forum": "周也",
       "level": 12,
-      "status": "success"
+      "status": "already"
     }
   ]
 }
