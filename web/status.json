@@ -1,20 +1,21 @@
 {
-  "generated_at": "2026-11-07T20:22:52.854482+00:00",
+  "generated_at": "2026-11-08T20:40:12.240383+00:00",
   "total": 38,
-  "success": 31,
-  "already": 7,
-  "failed": 0,
+  "success": 20,
+  "already": 17,
+  "failed": 1,
   "growth_status": "success",
   "forums": [
     {
       "forum": "上海城建职业学院",
       "level": 14,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "空间留言",
       "level": 13,
-      "status": "success"
+      "status": "failed",
+      "message": "Connection timeout to host https://tiebac.baidu.com/c/s/login"
     },
     {
       "forum": "空间访客",
@@ -29,12 +30,12 @@
     {
       "forum": "大同",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "猫",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "k说说",
@@ -57,22 +58,22 @@
       "status": "success"
     },
     {
+      "forum": "男生头像",
+      "level": 13,
+      "status": "already"
+    },
+    {
       "forum": "小说",
       "level": 13,
       "status": "already"
     },
     {
-      "forum": "男生头像",
+      "forum": "情侣头像",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "yy",
-      "level": 13,
-      "status": "success"
-    },
-    {
-      "forum": "情侣头像",
       "level": 13,
       "status": "success"
     },
@@ -92,6 +93,11 @@
       "status": "success"
     },
     {
+      "forum": "picsart",
+      "level": 13,
+      "status": "already"
+    },
+    {
       "forum": "葫芦侠三楼",
       "level": 13,
       "status": "already"
@@ -102,11 +108,6 @@
       "status": "already"
     },
     {
-      "forum": "picsart",
-      "level": 13,
-      "status": "success"
-    },
-    {
       "forum": "上海工会管理职业学院",
       "level": 13,
       "status": "success"
@@ -114,7 +115,7 @@
     {
       "forum": "discuz",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "江疏影",
@@ -124,7 +125,7 @@
     {
       "forum": "新媒体运营",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "天籁",
@@ -134,7 +135,7 @@
     {
       "forum": "义乌快递",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "腾讯qq号",
@@ -159,17 +160,17 @@
     {
       "forum": "憨批",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "孙笑川",
       "level": 12,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "相亲",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "新孙笑川",
@@ -189,12 +190,12 @@
     {
       "forum": "湖州",
       "level": 12,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "周也",
       "level": 12,
-      "status": "success"
+      "status": "already"
     }
   ]
 }
