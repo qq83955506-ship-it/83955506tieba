@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-14T20:50:45.889603+00:00",
+  "generated_at": "2026-11-15T21:08:32.620734+00:00",
   "total": 38,
-  "success": 26,
-  "already": 12,
+  "success": 29,
+  "already": 9,
   "failed": 0,
   "growth_status": "success",
   "forums": [
@@ -19,7 +19,7 @@
     {
       "forum": "空间访客",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "留言",
@@ -44,17 +44,17 @@
     {
       "forum": "炫舞三生三世",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "新浪围脖",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "王者荣耀",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "男生头像",
@@ -69,7 +69,7 @@
     {
       "forum": "yy",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "情侣头像",
@@ -82,12 +82,12 @@
       "status": "success"
     },
     {
-      "forum": "爱你纵使繁华一场",
+      "forum": "灵异",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
-      "forum": "灵异",
+      "forum": "爱你纵使繁华一场",
       "level": 13,
       "status": "success"
     },
@@ -109,7 +109,7 @@
     {
       "forum": "上海工会管理职业学院",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "discuz",
@@ -139,7 +139,7 @@
     {
       "forum": "腾讯qq号",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "图",
@@ -154,7 +154,7 @@
     {
       "forum": "淘宝网",
       "level": 12,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "憨批",
@@ -174,22 +174,22 @@
     {
       "forum": "新孙笑川",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "溪流缸",
       "level": 12,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "吴兴",
       "level": 12,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "湖州",
       "level": 12,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "周也",
