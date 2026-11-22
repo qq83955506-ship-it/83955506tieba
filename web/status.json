@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-21T21:45:39.631435+00:00",
+  "generated_at": "2026-11-22T21:55:34.913342+00:00",
   "total": 38,
-  "success": 23,
-  "already": 15,
+  "success": 19,
+  "already": 19,
   "failed": 0,
   "growth_status": "success",
   "forums": [
@@ -19,7 +19,7 @@
     {
       "forum": "空间访客",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "留言",
@@ -29,7 +29,7 @@
     {
       "forum": "大同",
       "level": 13,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "猫",
@@ -39,12 +39,12 @@
     {
       "forum": "k说说",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "炫舞三生三世",
       "level": 13,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "新浪围脖",
@@ -54,21 +54,6 @@
     {
       "forum": "王者荣耀",
       "level": 13,
-      "status": "success"
-    },
-    {
-      "forum": "男生头像",
-      "level": 13,
-      "status": "already"
-    },
-    {
-      "forum": "小说",
-      "level": 13,
-      "status": "already"
-    },
-    {
-      "forum": "yy",
-      "level": 13,
       "status": "already"
     },
     {
@@ -77,9 +62,24 @@
       "status": "already"
     },
     {
+      "forum": "男生头像",
+      "level": 13,
+      "status": "success"
+    },
+    {
       "forum": "快手",
       "level": 13,
       "status": "already"
+    },
+    {
+      "forum": "小说",
+      "level": 13,
+      "status": "success"
+    },
+    {
+      "forum": "yy",
+      "level": 13,
+      "status": "success"
     },
     {
       "forum": "爱你纵使繁华一场",
@@ -92,17 +92,17 @@
       "status": "success"
     },
     {
+      "forum": "葫芦侠三楼",
+      "level": 13,
+      "status": "already"
+    },
+    {
       "forum": "情侣",
       "level": 13,
       "status": "already"
     },
     {
       "forum": "picsart",
-      "level": 13,
-      "status": "success"
-    },
-    {
-      "forum": "葫芦侠三楼",
       "level": 13,
       "status": "success"
     },
@@ -129,7 +129,7 @@
     {
       "forum": "天籁",
       "level": 12,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "义乌快递",
@@ -137,12 +137,12 @@
       "status": "success"
     },
     {
-      "forum": "腾讯qq号",
+      "forum": "图",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
-      "forum": "图",
+      "forum": "腾讯qq号",
       "level": 12,
       "status": "success"
     },
@@ -159,32 +159,32 @@
     {
       "forum": "憨批",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "孙笑川",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "相亲",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "新孙笑川",
       "level": 12,
-      "status": "success"
+      "status": "already"
     },
     {
       "forum": "溪流缸",
       "level": 12,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "吴兴",
       "level": 12,
-      "status": "already"
+      "status": "success"
     },
     {
       "forum": "湖州",
@@ -194,7 +194,7 @@
     {
       "forum": "周也",
       "level": 12,
-      "status": "success"
+      "status": "already"
     }
   ]
 }
